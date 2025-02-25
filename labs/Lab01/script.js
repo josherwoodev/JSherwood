@@ -51,7 +51,11 @@ function getEventDate() {
     return res;
 }
 function calculateDaysUntil(eventDate) {
-    return new Date(new Date(eventDate) - new Date()).getDate();
+    return daysBetween(new Date(eventDate), new Date());
+}
+function daysBetween(date1, date2) {
+    const MILLIS_PER_DAY = 1000* 60 * 60 * 24;
+    return Math.ceil(Math.abs(date1.getTime() - date2.getTime()) / MILLIS_PER_DAY);
 }
 console.log("Days until your event: " + calculateDaysUntil(getEventDate()));
 /*  5. Temperature Classifier
@@ -98,9 +102,9 @@ class Student {
     }
 }
 let students = [new Student("Alice", 20), new Student("Bob", 22), new Student("Charlie", 18)];
-modifyStudents = () => {
+let modifyStudents = () => {
     let name = prompt("Which student would you like to update?");
-    let index = students.findIndex((val) => val.name.equals(name));
+    let index = students.findIndex((val) => val.name === name);
     if (index > -1) {
         let age = parseInt(prompt("What is the corrected age?"));
         if (isNaN(age)) console.log("ERROR:\tInvalid input entered for age.");
@@ -109,23 +113,47 @@ modifyStudents = () => {
         console.log("ERROR:\tNo student by that name exists.")
     }
     console.log(students)
-}
+};
 modifyStudents();
 /*  7. Grade Classification
     Use a fat arrow function named classifyGrade to classify grades.
         Prompt the user to input a grade as a number.
         Use conditionals to classify the grade as "A," "B," "C," "D," or "F."
     ONLY use ternaries!!!!
-        Log the result to the console using: “The grade classification is: “
+        Log the result to the console using: “The grade classification is: “*/
+let classifyGrade = () => {
+    let grades = parseInt(prompt("Enter the number grade."));
+    if (isNaN(grades)) console.log("ERROR:\tInvalid input entered for grade number.");
+    else {
+        let grade = grades >= 65 ? "D" : "F";
+        grade = grades >= 70 ? "C" : grade;
+        grade = grades >= 80 ? "B" : grade;
+        grade = grades >= 90 ? "A" : grade;
+        console.log("The grade classification is: ", grade);
+    }
+};
+classifyGrade();
 /*  8. Shopping List Operations
     Hardcode an array representing a shopping list of eggs, butter, flour, and eggs.
         Use a fat arrow function named modifyItem to modify items in an array.
         Takes two arguments - the shopping list array and the prompted new item form user.
-        Log the updated array to the console using: “Updated shopping list: “.
+        Log the updated array to the console using: “Updated shopping list: “.*/
+let shoppingList = ["eggs", "butter", "flour"];
+let modifyItem = (arr, add) => {
+    arr.push(add);
+    console.log("Updated shopping list: ", arr);
+};
+modifyItem(shoppingList, "sugar");
 /*  9. Weekday Detector
     Use a fat arrow function to determine the day of the week.
         Use the Date object to get the current day.
-        Log the day of the week to the console using: “Today is: “
+        Log the day of the week to the console using: “Today is: “*/
+let dayOfWeek = () => {
+    const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    let day = new Date().getDay();
+    console.log("Today is: ", DAYS[day]);
+}
+dayOfWeek();
 /*  10. How Long Until Graduation
     Use a fat arrow function to determine the day of the week.
         Use the Date object to get the current day.
@@ -136,3 +164,21 @@ modifyStudents();
     Log how many days left between the current date and last day of course work to the console using: “And you have <days> left in this web design program until graduation. “
     Last day is 5/17/25
     Rough idea. Does not need to be 100% accurate but should be within a few days of actual answer.*/
+let getPs = (date) => {
+    const PS = ["st", "nd", "rd", "th"];
+    let res;
+    if (date in [1, 21, 31]) res = PS[0];
+    else if (date in [2, 22]) res = PS[1];
+    else if (date in [3, 23]) res = PS[2];
+    else res = PS[3];
+    return res;
+};
+(() => {
+    const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    let today = new Date();
+    let date = today.getDate();
+    let datePs = getPs(date);
+    let courseEnd = new Date("2025-05-17");
+    let difference = daysBetween(today, courseEnd);
+    console.log("Today is: " + today.getFullYear() + ", " + MONTHS[today.getMonth()] + " " + date + datePs + " and you have " + difference + " days left in this web design program until graduation.");
+})();
