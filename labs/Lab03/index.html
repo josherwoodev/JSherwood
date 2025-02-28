@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" class="w-lvw h-lvh p-0 m-0">
+<head>
+    <meta charset="UTF-8">
+    <title>Dogs</title>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="w-lvw h-lvh p-0 m-0 flex flex-row content-center items-center justify-center" style="background-color: #ef23">
+<main>
+  <div id="content" class="w-4x1">
+    <h1 id="breed-name" class="justify-self-center p-10 font-bold" style="font-size: 3rem">&nbsp;</h1>
+    <div id="breed-img" class="flex content-center items-center justify-center">
+      <img src="" alt=" " id="dog-img" style="display: none" />
+    </div>
+    <div id="controls" class="flex justify-evenly">
+      <input type="button" id="left-btn" value="Back" class="p-3 rounded-lg border hover:bg-gray-100" onclick="leftBtnClick()" />
+      <select id="breed-select" class="p-3 rounded-lg border">
+        <option value="" disabled selected>Select Breed</option>
+      </select>
+      <input type="button" id="right-btn" value="Next" class="p-3 rounded-lg border hover:bg-gray-100" onclick="rightBtnClick()" />
+    </div>
+  </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
