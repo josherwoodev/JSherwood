@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Suck-ees Careers</title>
+    <link rel="icon" href="suck-ees-favicon.jpg" type="image/x-icon"/>
+</head>
+<body>
+<header>
+    <nav id="navbar">
+        <ul>
+            <li><a href="index.html"><b>Suck-ees</b></a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="">Now Hiring</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <h1>Suck-ees is hiring!</h1>
+    <form id="applicant">
+        <fieldset>
+            <legend>Apply Now!</legend>
+            <label for="firstName">First Name *</label>
+            <input type="text" name="firstName" id="firstName" minlength="1" maxlength="20" placeholder="John" required><br>
+            <label for="lastName">Last Name</label>
+            <input type="text" name="lastName" id="lastName" minlength="1" maxlength="20" placeholder="Doe"><br>
+            <label for="address1">Address Line 1 *</label>
+            <input type="text" name="address1" id="address1" maxlength="50" placeholder="123 Main St" required><br>
+            <label for="address2">Address Line 2</label>
+            <input type="text" name="address2" id="address2" maxlength="50" placeholder="Ste 303"><br>
+            <label for="city">City *</label>
+            <input type="text" name="city" id="city" maxlength="30" placeholder="Fakesville" required><br>
+            <label for="state">State *</label>
+            <select name="state" id="state" required>
+                <option value="" disabled selected>Select State</option>
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+                <option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option>
+            </select><br>
+            <label for="zip">Zip Code *</label>
+            <input type="text" name="zip" id="zip" minlength="5" maxlength="10" pattern="\d{5}(-\d{4})?"
+                   placeholder="12345-6789" required><br>
+            <label for="age">Age *</label>
+            <input type="number" name="age" id="age" min="21" max="99" placeholder="25" required><br>
+            <label for="phone">Phone Number *</label>
+            <input type="tel" name="phone" id="phone" minlength="10" maxlength="14"
+                   pattern="((\(\d{3}\) ?)|(\d{3}-?))\d{3}-?\d{4}" placeholder="123-456-7890" required><br>
+            <label for="email">Email *</label>
+            <input type="email" name="email" id="email" minlength="5" maxlength="50" placeholder="john@doe.com"
+                   required><br>
+            <label for="password">Password *</label>
+            <input type="password" name="password" id="password" minlength="8" maxlength="12"
+                   pattern="(?=.*\d)(?=.*\W)(?=.*[a-z])(?=.*[A-Z]).*" placeholder="********" required><br>
+            <fieldset>
+                <legend>Marital Status</legend>
+                <input type="radio" id="married" name="isMarried" value="married"/><label for="married">Married</label>
+                <input type="radio" id="widow" name="isMarried" value="widowed"/><label for="widow">Widow</label>
+                <input type="radio" id="single" name="isMarried" value="single" checked/><label for="single">Single</label>
+            </fieldset>
+            <fieldset>
+                <legend>Favorite Colors</legend>
+                <input type="checkbox" id="fav-color-red" name="fav-color" value="red"/><label for="fav-color-red">Red</label>
+                <input type="checkbox" id="fav-color-orange" name="fav-color" value="orange"/><label for="fav-color-orange">Orange</label>
+                <input type="checkbox" id="fav-color-yellow" name="fav-color" value="yellow"/><label for="fav-color-yellow">Yellow</label>
+                <input type="checkbox" id="fav-color-green" name="fav-color" value="green"/><label for="fav-color-green">Green</label>
+                <input type="checkbox" id="fav-color-blue" name="fav-color" value="blue"/><label for="fav-color-blue">Blue</label>
+                <input type="checkbox" id="fav-color-purple" name="fav-color" value="purple"/><label for="fav-color-purple">Purple</label>
+            </fieldset>
+            <label for="more-info">More Info</label>
+            <textarea name="more-info" id="more-info" cols="30" rows="4" maxlength="120"></textarea><br>
+            <input type="submit" value="Submit"/>
+            <input type="reset" value="Reset"/>
+        </fieldset>
+    </form>
+</main>
+<footer></footer>
+<script src="script.js"></script>
+</body>
+</html>
