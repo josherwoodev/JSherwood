@@ -70,5 +70,8 @@
     font-style: italic;
 }
 /*  My Custom CSS   */
+/*  Color scheme defined to match colors from logo image    */
+h1 {font-family: "Alegreya Sans SC", sans-serif;}
+
 .bg-grey {background-color: #f1f1f1ff !important;}
 .w-0 {width: 0 !important;}
