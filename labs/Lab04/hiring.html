@@ -3,78 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <title>Suck-ees Careers</title>
-    <link rel="icon" href="suck-ees-favicon.jpg" type="image/x-icon"/>
+    <link rel="icon" href="assets/suck-eesFavicon.png" type="image/x-icon"/>
+    <!--    Font Awesome    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css" integrity="sha512-v8QQ0YQ3H4K6Ic3PJkym91KoeNT5S3PnDKvqnwqFD1oiqIl653crGZplPdU5KKtHjO0QKcQ2aUlQZYjHczkmGw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/solid.min.css" integrity="sha512-DzC7h7+bDlpXPDQsX/0fShhf1dLxXlHuhPBkBo/5wJWRoTU6YL7moeiNoej6q3wh5ti78C57Tu1JwTNlcgHSjg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!--    Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!--    Google Fonts    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--    My Styles   -->
+    <link rel="stylesheet" href="general.css">
 </head>
-<body>
-<header>
-    <nav id="navbar">
-        <ul>
-            <li><a href="index.html"><b>Suck-ees</b></a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="">Now Hiring</a></li>
-        </ul>
-    </nav>
-</header>
-<main>
-    <h1>Suck-ees is hiring!</h1>
-    <form id="applicant">
-        <fieldset>
-            <legend>Apply Now!</legend>
-            <label for="firstName">First Name *</label>
-            <input type="text" name="firstName" id="firstName" minlength="1" maxlength="20" placeholder="John" required><br>
-            <label for="lastName">Last Name</label>
-            <input type="text" name="lastName" id="lastName" minlength="1" maxlength="20" placeholder="Doe"><br>
-            <label for="address1">Address Line 1 *</label>
-            <input type="text" name="address1" id="address1" maxlength="50" placeholder="123 Main St" required><br>
-            <label for="address2">Address Line 2</label>
-            <input type="text" name="address2" id="address2" maxlength="50" placeholder="Ste 303"><br>
-            <label for="city">City *</label>
-            <input type="text" name="city" id="city" maxlength="30" placeholder="Fakesville" required><br>
-            <label for="state">State *</label>
-            <select name="state" id="state" required>
-                <option value="" disabled selected>Select State</option>
-                <option value="AL">Alabama</option>
-                <option value="AK">Alaska</option>
-                <option value="AZ">Arizona</option>
-                <option value="AR">Arkansas</option>
-            </select><br>
-            <label for="zip">Zip Code *</label>
-            <input type="text" name="zip" id="zip" minlength="5" maxlength="10" pattern="\d{5}(-\d{4})?"
-                   placeholder="12345-6789" required><br>
-            <label for="age">Age *</label>
-            <input type="number" name="age" id="age" min="21" max="99" placeholder="25" required><br>
-            <label for="phone">Phone Number *</label>
-            <input type="tel" name="phone" id="phone" minlength="10" maxlength="14"
-                   pattern="((\(\d{3}\) ?)|(\d{3}-?))\d{3}-?\d{4}" placeholder="123-456-7890" required><br>
-            <label for="email">Email *</label>
-            <input type="email" name="email" id="email" minlength="5" maxlength="50" placeholder="john@doe.com"
-                   required><br>
-            <label for="password">Password *</label>
-            <input type="password" name="password" id="password" minlength="8" maxlength="12"
-                   pattern="(?=.*\d)(?=.*\W)(?=.*[a-z])(?=.*[A-Z]).*" placeholder="********" required><br>
-            <fieldset>
-                <legend>Marital Status</legend>
-                <input type="radio" id="married" name="isMarried" value="married"/><label for="married">Married</label>
-                <input type="radio" id="widow" name="isMarried" value="widowed"/><label for="widow">Widow</label>
-                <input type="radio" id="single" name="isMarried" value="single" checked/><label for="single">Single</label>
-            </fieldset>
-            <fieldset>
-                <legend>Favorite Colors</legend>
-                <input type="checkbox" id="fav-color-red" name="fav-color" value="red"/><label for="fav-color-red">Red</label>
-                <input type="checkbox" id="fav-color-orange" name="fav-color" value="orange"/><label for="fav-color-orange">Orange</label>
-                <input type="checkbox" id="fav-color-yellow" name="fav-color" value="yellow"/><label for="fav-color-yellow">Yellow</label>
-                <input type="checkbox" id="fav-color-green" name="fav-color" value="green"/><label for="fav-color-green">Green</label>
-                <input type="checkbox" id="fav-color-blue" name="fav-color" value="blue"/><label for="fav-color-blue">Blue</label>
-                <input type="checkbox" id="fav-color-purple" name="fav-color" value="purple"/><label for="fav-color-purple">Purple</label>
-            </fieldset>
-            <label for="more-info">More Info</label>
-            <textarea name="more-info" id="more-info" cols="30" rows="4" maxlength="120"></textarea><br>
-            <input type="submit" value="Submit"/>
-            <input type="reset" value="Reset"/>
-        </fieldset>
-    </form>
-</main>
-<footer></footer>
+<body class="bg-my-bg w-100 h-100 overflow-auto m-0 p-0">
+<div class="d-flex flex-column min-vh-100">
+    <header class="bg-my-blue sticky-top d-flex justify-content-around">
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-light px-3 alegreya-sans-sc-medium">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/suck-eesBrand.png" alt="Suck-ees-favicon" loading="lazy"/>
+            </a>
+            <i class="navbar-item mx-2 border-start border-light w-0 py-2 overflow-hidden">&nbsp;</i>
+            <ul class="navbar-nav ms-0 me-auto">
+                <li class="nav-item"><a href="index.html" class="nav-link text-light fw-bold fs-6">Suck-ees</a></li>
+                <li class="nav-item"><a href="menu.html" class="nav-link text-light fs-6">Menu</a></li>
+                <li class="nav-item active"><a href="#" class="nav-link text-light fs-6">Now Hiring</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="py-3 mb-auto flex-fill">
+        <div class="container p-3 mx-auto bg-light rounded-3">
+            <div class="d-flex flex-row align-items-center justify-content-center">
+                <h1 class="display-3 fw-bold">Suck-ees is hiring!</h1>
+            </div>
+            <form id="applicant">
+                <fieldset>
+                    <legend>Apply Now!
+                        <div class="float-end fs-6">* Required</div>
+                    </legend>
+                    <div class="form-group d-flex flex-row justify-content-between align-content-center mb-3">
+                        <div class="form-floating w-40">
+                            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="John" required>
+                            <label for="firstName">First Name *</label>
+                            <div class="invalid-feedback">
+                                Please provide your first name.
+                            </div>
+                        </div>
+                        <div class="form-floating w-40">
+                            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Doe">
+                            <label for="lastName">Last Name</label>
+                        </div>
+                        <div class="form-floating w-20">
+                            <input type="number" class="form-control" id="age" name="age" placeholder="age" required>
+                            <label for="age">Age *</label>
+                            <div class="invalid-feedback">
+                                Please provide a valid age. Applicants must be between 21 and 99 years old.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group d-flex flex-row justify-content-between align-content-center">
+                        <div class="form-floating w-50">
+                            <input type="text" class="form-control" id="address1" name="address1" placeholder="123 Street Name" required>
+                            <label for="address1">Address Line 1 *</label>
+                            <div class="invalid-feedback">
+                                Please enter your address.
+                            </div>
+                        </div>
+                        <div class="form-floating w-50">
+                            <input type="text" class="form-control" id="address2" name="address2" placeholder="Ste 300">
+                            <label for="address2">Address Line 2</label>
+                        </div>
+                    </div>
+                    <div class="form-group d-flex flex-row justify-content-between align-content-center mb-3">
+                        <div class="form-floating w-33">
+                            <input type="text" class="form-control" id="city" name="city" placeholder="City" required>
+                            <label for="city">City *</label>
+                            <div class="invalid-feedback">
+                                Please enter a city.
+                            </div>
+                        </div>
+                        <div class="form-floating w-33">
+                            <select class="form-select is-invalid" id="state" name="state" required>
+                                <option value="" class="disabled" disabled selected>-- State --</option>
+                                <option value="AL">Alabama</option>
+                                <option value="AK">Alaska</option>
+                                <option value="AZ">Arizona</option>
+                                <option value="AR">Arkansas</option>
+                            </select>
+                            <label for="state">State *</label>
+                            <div class="invalid-feedback">
+                                Please select a state.
+                            </div>
+                        </div>
+                        <div class="form-floating w-33">
+                            <input type="text" class="form-control" id="zip" name="zip" placeholder="12345" required>
+                            <label for="zip">Zip *</label>
+                            <div class="invalid-feedback">
+                                Zip-code not in correct format.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group d-flex flex-row justify-content-between align-content-center mb-3">
+                        <div class="form-floating w-60">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+                            <label for="email">Email *</label>
+                            <div class="invalid-feedback">
+                                Please provide a valid email address.
+                            </div>
+                        </div>
+                        <div class="form-floating w-40">
+                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="123-45-678" required>
+                            <label for="phone">Phone Number *</label>
+                            <div class="invalid-feedback">
+                                Please provide a valid phone number.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group d-flex flex-row justify-content-between align-content-center mb-3">
+                        <div class="form-floating w-50">
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+                            <label for="password">Password *</label>
+                            <div class="invalid-feedback p-3">
+                                <div class="fw-bold">Please provide a valid password.</div>
+                                <div id="password-validation-tooltip-requirement-length"><i class="fa"></i> Must be between 8 - 12 characters.</div>
+                                <div id="password-validation-tooltip-requirement-case"><i class="fa"></i> Must include uppercase and lowercase letters.</div>
+                                <div id="password-validation-tooltip-requirement-num"><i class="fa"></i> Must include at least one number.</div>
+                                <div id="password-validation-tooltip-requirement-special"><i class="fa"></i> Must include at least one special character.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group d-flex flex-row justify-content-start align-content-center mb-3">
+                        <fieldset class="form-group w-50">
+                            <legend>Marital Status</legend>
+                            <div class="d-flex flex-row justify-content-between align-content-center">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="maritalStatus" id="married" value="married">
+                                    <label class="form-check-label" for="married">Married</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="maritalStatus" id="single" value="single" checked>
+                                    <label class="form-check-label" for="single">Single</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="maritalStatus" id="widowed" value="widowed">
+                                    <label class="form-check-label" for="widowed">Widowed</label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="form-group d-flex flex-row justify-content-between align-content-center mb-3">
+                        <fieldset class="form-group">
+                            <legend>Favorite Colors</legend>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="colors" id="fav-color-red" value="red">
+                                <label class="form-check-label" for="fav-color-red">Red</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="colors" id="fav-color-orange" value="orange">
+                                <label class="form-check-label" for="fav-color-orange">Orange</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="colors" id="fav-color-yellow" value="yellow">
+                                <label class="form-check-label" for="fav-color-yellow">Yellow</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="colors" id="fav-color-green" value="green">
+                                <label class="form-check-label" for="fav-color-green">Green</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="colors" id="fav-color-blue" value="blue">
+                                <label class="form-check-label" for="fav-color-blue">Blue</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="colors" id="fav-color-purple" value="purple">
+                                <label class="form-check-label" for="fav-color-purple">Purple</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="form-group d-flex flex-row justify-content-between align-content-center mb-3">
+                        <div class="form-floating w-50">
+                            <textarea class="form-control w-100" id="addedInfo" name="addedInfo" placeholder="Notes" style="min-height: 120px;"></textarea>
+                            <label for="addedInfo">Additional Info <span id="addedInfo-char-count" class="bg-secondary text-light rounded-1 px-1 opacity-25">30/30</span></label>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="d-flex flex-row justify-content-center align-content-center">
+                    <button type="submit" class="btn btn-outline-primary me-3"><i class="fa-solid fa-check"></i> Submit</button><!--============= Font Awesome =============-->
+                    <button type="reset" class="btn btn-outline-danger"><i class="fa-solid fa-refresh"></i> Reset</button><!--============= Font Awesome =============-->
+                </div>
+            </form>
+        </div>
+    </main>
+    <h1></h1>
+    <footer class="bg-my-blue sticky-bottom"></footer>
+</div>
 <script src="script.js"></script>
 </body>
 </html>

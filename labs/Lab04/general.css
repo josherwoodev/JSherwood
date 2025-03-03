@@ -1,10 +1,77 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
+/*  CONSTANTS   */
+:root {
+    --nav-select-size: 4px;
+    --my-blue: #1a69ab;
+    --my-yellow: #f8d800;
+    --my-yellow-half: #f8d80080;
+    --my-bg: #060620;
 }
 
-body {
-    background: #deff;
+/*  Google Fonts    */
+.alegreya-sans-sc-medium {
+    font-family: "Alegreya Sans SC", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/*  My Custom CSS   */
+/*  Color scheme defined to match colors from logo image, using design comparable to Buc-ees    */
+body {background: url("assets/suck-eesShadow.png") repeat-x bottom 80px right -70px;}
+
+h1 {font-family: "Alegreya Sans SC", sans-serif;}
+
+footer {height: 60px;}
+
+img#menu-image {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 4/3;
+}
+
+.bg-my-bg {background-color: var(--my-bg) !important;}
+
+.bg-my-blue {background-color: var(--my-blue) !important;}
+
+.w-0 {width: 0 !important;}
+
+.w-20 {width: 20% !important;}
+
+.w-33 {width: 33.333% !important;}
+
+.w-40 {width: 40% !important;}
+
+.w-60 {width: 60% !important;}
+
+/*  Bootstrap Alterations   */
+
+.navbar-brand img {
+    width: 50px;
+    height: 50px;
+    margin: -10px;
+}
+
+.nav-item:hover, .nav-item.active, .nav-item:has(a:focus) {
+    position: relative !important;
+}
+
+.nav-item:hover, .nav-item:has(a:focus) {
+    background-image: linear-gradient(0deg, var(--my-yellow-half), transparent, transparent) !important;
+}
+
+.nav-item:hover:after, .nav-item.active:after, .nav-item:has(a:focus):after {
+    background-color: var(--my-yellow);
+    content: "";
+    display: block;
+    width: 100%;
+    height: var(--nav-select-size);
+    position: absolute;
+    bottom: 0;
+}
+
+.form-floating textarea ~ label span {
+    display: none;
+}
+
+.form-floating textarea:focus ~ label span, .form-floating > .form-control:not(:placeholder-shown) ~ label span {
+    display: revert;
 }
