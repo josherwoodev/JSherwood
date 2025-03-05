@@ -1,77 +1,126 @@
+/*  CONSTANTS   */
+:root {
+    --nav-select-size: 6px;
+    --my-blue: #1a69ab;
+    --my-yellow: #f8d800;
+    --my-bg: #060620;
+}
+
 /*  Google Fonts    */
 .alegreya-sans-sc-thin {
     font-family: "Alegreya Sans SC", sans-serif;
     font-weight: 100;
     font-style: normal;
 }
+
 .alegreya-sans-sc-light {
     font-family: "Alegreya Sans SC", sans-serif;
     font-weight: 300;
     font-style: normal;
 }
+
 .alegreya-sans-sc-regular {
     font-family: "Alegreya Sans SC", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
+
 .alegreya-sans-sc-medium {
     font-family: "Alegreya Sans SC", sans-serif;
     font-weight: 500;
     font-style: normal;
 }
+
 .alegreya-sans-sc-bold {
     font-family: "Alegreya Sans SC", sans-serif;
     font-weight: 700;
     font-style: normal;
 }
+
 .alegreya-sans-sc-extrabold {
     font-family: "Alegreya Sans SC", sans-serif;
     font-weight: 800;
     font-style: normal;
 }
+
 .alegreya-sans-sc-black {
     font-family: "Alegreya Sans SC", sans-serif;
     font-weight: 900;
     font-style: normal;
 }
+
 .alegreya-sans-sc-thin-italic {
     font-family: "Alegreya Sans SC", sans-serif;
     font-weight: 100;
     font-style: italic;
 }
+
 .alegreya-sans-sc-light-italic {
     font-family: "Alegreya Sans SC", sans-serif;
     font-weight: 300;
     font-style: italic;
 }
+
 .alegreya-sans-sc-regular-italic {
     font-family: "Alegreya Sans SC", sans-serif;
     font-weight: 400;
     font-style: italic;
 }
+
 .alegreya-sans-sc-medium-italic {
     font-family: "Alegreya Sans SC", sans-serif;
     font-weight: 500;
     font-style: italic;
 }
+
 .alegreya-sans-sc-bold-italic {
     font-family: "Alegreya Sans SC", sans-serif;
     font-weight: 700;
     font-style: italic;
 }
+
 .alegreya-sans-sc-extrabold-italic {
     font-family: "Alegreya Sans SC", sans-serif;
     font-weight: 800;
     font-style: italic;
 }
+
 .alegreya-sans-sc-black-italic {
     font-family: "Alegreya Sans SC", sans-serif;
     font-weight: 900;
     font-style: italic;
 }
+
 /*  My Custom CSS   */
-/*  Color scheme defined to match colors from logo image    */
+/*  Color scheme defined to match colors from logo image, using design comparable to Buc-ees    */
 h1 {font-family: "Alegreya Sans SC", sans-serif;}
 
-.bg-grey {background-color: #f1f1f1ff !important;}
+footer {height: 60px;}
+
+.bg-my-bg {background-color: var(--my-bg) !important;}
+
+.bg-my-blue {background-color: var(--my-blue) !important;}
+
 .w-0 {width: 0 !important;}
+
+.navbar-brand img {
+    width: 50px;
+    height: 50px;
+    margin: -10px;
+}
+
+/*  Bootstrap Alterations   */
+.nav-item:hover, .nav-item.active {
+    margin-bottom: calc(-1 * var(--nav-select-size)) !important;
+    position: relative !important;
+}
+
+.nav-item:hover:after, .nav-item.active:after {
+    background-color: var(--my-yellow);
+    content: "";
+    display: block;
+    width: 100%;
+    height: var(--nav-select-size);
+    position: absolute;
+    bottom: var(--nav-select-size);
+}
