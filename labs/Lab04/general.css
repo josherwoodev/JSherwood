@@ -1,6 +1,6 @@
 /*  CONSTANTS   */
 :root {
-    --nav-select-size: 6px;
+    --nav-select-size: 4px;
     --my-blue: #1a69ab;
     --my-yellow: #f8d800;
     --my-bg: #060620;
@@ -111,8 +111,11 @@ footer {height: 60px;}
 
 /*  Bootstrap Alterations   */
 .nav-item:hover, .nav-item.active {
-    margin-bottom: calc(-1 * var(--nav-select-size)) !important;
+    /*margin-bottom: calc(-1 * var(--nav-select-size)) !important;*/
     position: relative !important;
+}
+.nav-item:hover {
+    background-image: linear-gradient(0deg, var(--my-yellow), transparent, transparent) !important;
 }
 
 .nav-item:hover:after, .nav-item.active:after {
@@ -122,5 +125,5 @@ footer {height: 60px;}
     width: 100%;
     height: var(--nav-select-size);
     position: absolute;
-    bottom: var(--nav-select-size);
+    bottom: 0;
 }
