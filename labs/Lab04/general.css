@@ -110,11 +110,10 @@ footer {height: 60px;}
 }
 
 /*  Bootstrap Alterations   */
-.nav-item:hover, .nav-item.active {
-    /*margin-bottom: calc(-1 * var(--nav-select-size)) !important;*/
+.nav-item:hover, .nav-item.active, .nav-item:has(a:focus) {
     position: relative !important;
 }
-.nav-item:hover {
+.nav-item:hover, .nav-item:has(a:focus) {
     background-image: linear-gradient(0deg, var(--my-yellow), transparent, transparent) !important;
 }
 
