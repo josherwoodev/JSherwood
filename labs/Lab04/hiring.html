@@ -38,39 +38,153 @@
             <form id="applicant">
                 <fieldset>
                     <legend>Apply Now!</legend>
-                    <label class="d-block">First Name *<input type="text" name="firstName" id="firstName" minlength="1" maxlength="20" placeholder="John" required></label>
-                    <label class="d-block">Last Name<input type="text" name="lastName" id="lastName" minlength="1" maxlength="20" placeholder="Doe"></label>
-                    <label class="d-block">Address Line 1 *<input type="text" name="address1" id="address1" maxlength="50" placeholder="123 Main St" required></label>
-                    <label class="d-block">Address Line 2<input type="text" name="address2" id="address2" maxlength="50" placeholder="Ste 303"></label>
-                    <label class="d-block">City *<input type="text" name="city" id="city" maxlength="30" placeholder="Fakesville" required></label>
-                    <label class="d-block">State *<select name="state" id="state" required>
-                        <option value="" disabled selected>Select State</option>
-                        <option value="AL">Alabama</option>
-                        <option value="AK">Alaska</option>
-                        <option value="AZ">Arizona</option>
-                        <option value="AR">Arkansas</option>
-                    </select></label>
-                    <label class="d-block">Zip Code *<input type="text" name="zip" id="zip" minlength="5" maxlength="10" pattern="\d{5}(-\d{4})?" placeholder="12345-6789" required></label>
-                    <label class="d-block">Age *<input type="number" name="age" id="age" min="21" max="99" placeholder="25" required></label>
-                    <label class="d-block">Phone Number *<input type="tel" name="phone" id="phone" minlength="10" maxlength="14" pattern="((\(\d{3}\) ?)|(\d{3}-?))\d{3}-?\d{4}" placeholder="123-456-7890" required></label>
-                    <label class="d-block">Email *<input type="email" name="email" id="email" minlength="5" maxlength="50" placeholder="john@doe.com" required></label>
-                    <label class="d-block">Password *<input type="password" name="password" id="password" minlength="8" maxlength="12" pattern="(?=.*\d)(?=.*\W)(?=.*[a-z])(?=.*[A-Z]).*" placeholder="********" required></label>
-                    <fieldset class="d-block">
-                        <legend>Marital Status</legend>
-                        <label><input type="radio" id="married" name="isMarried" value="married"/>Married</label>
-                        <label><input type="radio" id="widow" name="isMarried" value="widowed"/>Widow</label>
-                        <label><input type="radio" id="single" name="isMarried" value="single" checked/>Single</label>
-                    </fieldset>
-                    <fieldset class="d-block">
-                        <legend>Favorite Colors</legend>
-                        <label><input type="checkbox" id="fav-color-red" name="fav-color" value="red"/>Red</label>
-                        <label><input type="checkbox" id="fav-color-orange" name="fav-color" value="orange"/>Orange</label>
-                        <label><input type="checkbox" id="fav-color-yellow" name="fav-color" value="yellow"/>Yellow</label>
-                        <label><input type="checkbox" id="fav-color-green" name="fav-color" value="green"/>Green</label>
-                        <label><input type="checkbox" id="fav-color-blue" name="fav-color" value="blue"/>Blue</label>
-                        <label><input type="checkbox" id="fav-color-purple" name="fav-color" value="purple"/>Purple</label>
-                    </fieldset>
-                    <label for="more-info" class="d-block">More Info<textarea name="more-info" id="more-info" cols="30" rows="4" maxlength="120"></textarea></label>
+                    <div class="form-group d-flex flex-row justify-content-between align-content-center mb-3">
+                        <div class="form-floating w-40">
+                            <input type="text" class="form-control" id="firstName" placeholder="John" required>
+                            <label for="firstName">First Name</label>
+                        </div>
+                        <div class="form-floating w-40">
+                            <input type="text" class="form-control" id="lastName" placeholder="Doe">
+                            <label for="lastName">Last Name</label>
+                        </div>
+                        <div class="form-floating w-20">
+                            <input type="number" class="form-control" id="age" placeholder="age" required>
+                            <label for="age">Age</label>
+                        </div>
+                    </div>
+                    <div class="form-group d-flex flex-row justify-content-between align-content-center">
+                        <div class="form-floating w-50">
+                            <input type="text" class="form-control" id="address1" placeholder="123 Street Name" required>
+                            <label for="address1">Address Line 1</label>
+                        </div>
+                        <div class="form-floating w-50">
+                            <input type="text" class="form-control" id="address2" placeholder="Ste 300">
+                            <label for="address2">Address Line 2</label>
+                        </div>
+                    </div>
+                    <div class="form-group d-flex flex-row justify-content-between align-content-center mb-3">
+                        <div class="form-floating w-33">
+                            <input type="text" class="form-control" id="city" placeholder="City" required>
+                            <label for="city">City</label>
+                        </div>
+                        <div class="form-floating w-33">
+                            <select class="form-select" id="state" required>
+                                <option class="disabled" disabled selected>-- State --</option>
+                                <option value="AL">Alabama</option>
+                                <option value="AK">Alaska</option>
+                                <option value="AZ">Arizona</option>
+                                <option value="AR">Arkansas</option>
+                            </select>
+                            <label for="state">State</label>
+                        </div>
+                        <div class="form-floating w-33">
+                            <input type="number" class="form-control" id="zip" placeholder="12345" required>
+                            <label for="zip">Zip</label>
+                        </div>
+                    </div>
+                    <div class="form-group d-flex flex-row justify-content-between align-content-center mb-3">
+                        <div class="form-floating w-60">
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="form-floating w-40">
+                            <input type="tel" class="form-control" id="phone" placeholder="123-45-678" required>
+                            <label for="phone">Phone Number</label>
+                        </div>
+                    </div>
+                    <div class="form-group d-flex flex-row justify-content-between align-content-center mb-3">
+                        <div class="form-floating w-50">
+                            <input type="password" class="form-control" id="password" placeholder="Password" required>
+                            <label for="password">Password</label>
+                        </div>
+                    </div>
+                    <div class="form-group d-flex flex-row justify-content-start align-content-center mb-3">
+                        <fieldset class="form-group">
+                            <legend>Marital Status</legend>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="maritalStatus" id="married" value="married">
+                                <label class="form-check-label" for="married">Married</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="maritalStatus" id="single" value="single">
+                                <label class="form-check-label" for="single">Single</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="maritalStatus" id="widowed" value="widowed">
+                                <label class="form-check-label" for="widowed">Widowed</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="form-group d-flex flex-row justify-content-between align-content-center mb-3">
+                        <fieldset class="form-group">
+                            <legend>Favorite Colors</legend>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="colors" id="fav-color-red" value="red">
+                                <label class="form-check-label" for="fav-color-red">Red</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="colors" id="fav-color-orange" value="orange">
+                                <label class="form-check-label" for="fav-color-orange">Orange</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="colors" id="fav-color-yellow" value="yellow">
+                                <label class="form-check-label" for="fav-color-yellow">Yellow</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="colors" id="fav-color-green" value="green">
+                                <label class="form-check-label" for="fav-color-green">Green</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="colors" id="fav-color-blue" value="blue">
+                                <label class="form-check-label" for="fav-color-blue">Blue</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="colors" id="fav-color-purple" value="purple">
+                                <label class="form-check-label" for="fav-color-purple">Purple</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="form-group d-flex flex-row justify-content-between align-content-center mb-3">
+                        <div class="form-floating w-50">
+                            <textarea class="form-control w-100" id="addedInfo" placeholder="Notes" style="min-height: 120px;"></textarea>
+                            <label for="addedInfo">Additional Info</label>
+                        </div>
+                    </div>
+<!--                    <label class="d-block w-50">First Name *<input type="text" name="firstName" id="firstName" minlength="1" maxlength="20" placeholder="John" required></label>-->
+<!--                    <label class="d-block w-50">Last Name<input type="text" name="lastName" id="lastName" minlength="1" maxlength="20" placeholder="Doe"></label>-->
+<!--                    <div class="w-100 d-flex justify-content-between align-items-center flex-direction-row flex-wrap">-->
+<!--                        <label class="d-block">Address Line 1 *<input type="text" name="address1" id="address1" maxlength="50" placeholder="123 Main St" required></label>-->
+<!--                        <label class="d-block">Address Line 2<input type="text" name="address2" id="address2" maxlength="50" placeholder="Ste 303"></label>-->
+<!--                        <label class="d-block">City *<input type="text" name="city" id="city" maxlength="30" placeholder="Fakesville" required></label>-->
+<!--                        <label class="d-block">State *<select name="state" id="state" required>-->
+<!--                            <option value="" disabled selected>Select State</option>-->
+<!--                            <option value="AL">Alabama</option>-->
+<!--                            <option value="AK">Alaska</option>-->
+<!--                            <option value="AZ">Arizona</option>-->
+<!--                            <option value="AR">Arkansas</option>-->
+<!--                        </select></label>-->
+<!--                        <label class="d-block">Zip Code *<input type="text" name="zip" id="zip" minlength="5" maxlength="10" pattern="\d{5}(-\d{4})?" placeholder="12345-6789" required></label>-->
+<!--                    </div>-->
+<!--                    <label class="d-block">Age *<input type="number" name="age" id="age" min="21" max="99" placeholder="25" required></label>-->
+<!--                    <label class="d-block">Phone Number *<input type="tel" name="phone" id="phone" minlength="10" maxlength="14" pattern="((\(\d{3}\) ?)|(\d{3}-?))\d{3}-?\d{4}" placeholder="123-456-7890" required></label>-->
+<!--                    <label class="d-block">Email *<input type="email" name="email" id="email" minlength="5" maxlength="50" placeholder="john@doe.com" required></label>-->
+<!--                    <label class="d-block">Password *<input type="password" name="password" id="password" minlength="8" maxlength="12" pattern="(?=.*\d)(?=.*\W)(?=.*[a-z])(?=.*[A-Z]).*" placeholder="********" required></label>-->
+<!--                    <fieldset class="d-block">-->
+<!--                        <legend>Marital Status</legend>-->
+<!--                        <label><input type="radio" id="married" name="isMarried" value="married"/>Married</label>-->
+<!--                        <label><input type="radio" id="widow" name="isMarried" value="widowed"/>Widow</label>-->
+<!--                        <label><input type="radio" id="single" name="isMarried" value="single" checked/>Single</label>-->
+<!--                    </fieldset>-->
+<!--                    <fieldset class="d-block">-->
+<!--                        <legend>Favorite Colors</legend>-->
+<!--                        <label><input type="checkbox" id="fav-color-red" name="fav-color" value="red"/>Red</label>-->
+<!--                        <label><input type="checkbox" id="fav-color-orange" name="fav-color" value="orange"/>Orange</label>-->
+<!--                        <label><input type="checkbox" id="fav-color-yellow" name="fav-color" value="yellow"/>Yellow</label>-->
+<!--                        <label><input type="checkbox" id="fav-color-green" name="fav-color" value="green"/>Green</label>-->
+<!--                        <label><input type="checkbox" id="fav-color-blue" name="fav-color" value="blue"/>Blue</label>-->
+<!--                        <label><input type="checkbox" id="fav-color-purple" name="fav-color" value="purple"/>Purple</label>-->
+<!--                    </fieldset>-->
+<!--                    <label for="more-info" class="d-block">More Info<textarea name="more-info" id="more-info" cols="30" rows="4" maxlength="120"></textarea></label>-->
                     <button type="submit" class="btn btn-outline-primary"><i class="fa-solid fa-check"></i> Submit</button><!--============= Font Awesome =============-->
                     <button type="reset" class="btn btn-outline-danger"><i class="fa-solid fa-refresh"></i> Reset</button><!--============= Font Awesome =============-->
                 </fieldset>
