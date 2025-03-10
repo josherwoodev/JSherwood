@@ -32,40 +32,25 @@
         </div>
     </header>
     <main class="py-3 mb-auto flex-fill">
-        <div class="container p-3 mx-auto bg-light rounded-3">
+        <div class="container p-3 mx-auto bg-light rounded-3 d-flex flex-column justify-content-center align-items-center align-content-center">
             <h1>Suck-ees Menu Options</h1>
-            <table>
-                <tr>
-                    <th>Item</th>
-                    <th>Description</th>
-                    <th>Price</th>
-                </tr>
-                <tr>
-                    <td>Signature Skunk</td>
-                    <td>Suck-ees signature dish! Black & white fur included.</td>
-                    <td>$28</td>
-                </tr>
-                <tr>
-                    <td>Roadkill Strip</td>
-                    <td>Scraped up fresh from the side of the road.</td>
-                    <td>$12</td>
-                </tr>
-                <tr>
-                    <td>Skunk Jerky</td>
-                    <td>Signature Suck-ees Skunk dried and seasoned for a bite on the road.</td>
-                    <td>$17</td>
-                </tr>
-                <tr>
-                    <td>Neebs' Gaming Special</td>
-                    <td>Turtle soup imported directly from Cannibal Island as seen in Sons of the Forest.</td>
-                    <td>$16</td>
-                </tr>
-                <tr>
-                    <td>Cannibal Leg</td>
-                    <td>Even bigger than a turkey leg, enjoy this exotic feast from Cannibal Island.</td>
-                    <td>$21</td>
-                </tr>
-            </table>
+            <div id="menu-display" class="d-flex flex-row align-content-stretch justify-content-center p-0 m-0 w-100">
+                <div class="w-50">
+                    <div class="d-flex flex-column align-items-center justify-content-center align-content-center m-auto p-0 overflow-scroll h-100 border border-dark border-end-0">
+                        <img id="menu-image" alt="" />
+                    </div>
+                </div>
+                <div class="w-50">
+                    <div id="menu-text" class="d-flex flex-column align-items-center justify-content-center align-content-center m-auto p-3 overflow-hidden h-100 border border-dark">
+                        <h2 id="menu-title" class="text-dark fw-bold fs-6"></h2>
+                        <p id="menu-description" class="text-dark fs-6"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-row align-items-center justify-content-center align-content-center p-0 m-0">
+                <button id="prev" name="prev" type="button" class="btn btn-dark mx-4 mt-3">Previous</button>
+                <button id="next" name="next" type="button" class="btn btn-dark mx-4 mt-3">Next</button>
+            </div>
         </div>
     </main>
     <footer class="bg-my-blue sticky-bottom"></footer>
