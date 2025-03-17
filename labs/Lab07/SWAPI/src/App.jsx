@@ -1,11 +1,12 @@
-import {useState} from 'react'
+import {useEffect, useState} from 'react';
+import Table from "./components/Table.jsx";
 
 export default function App() {
-    const [count, setCount] = useState(0)
+    const [rows, setRows] = useState([]);
 
-    return (<>
-        <p className="read-the-docs">
-            Click on the Vite and React logos to learn more
-        </p>
-    </>);
+    useEffect(() => {
+        setRows([{name:'Joe',height:'5\'8"',hair_color:'black',gender:'male'}]);
+    }, []);
+
+    return (<Table data={rows} />);
 }
