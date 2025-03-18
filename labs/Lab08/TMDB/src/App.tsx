@@ -8,18 +8,18 @@ export default function App() {
 
     return (
         <>
-            <NavBar></NavBar>
-            <div style={{flexGrow:1, width:'100%'}}>
+            <NavBar links={[{text: "Home", handler: () => setPage(PAGES.INDEX)}, {text: "Now Playing", handler: () => setPage(PAGES.NOW_PLAYING)}]}/>
+            <div style={{flexGrow: 1, width: '100%'}}>
                 <p>{import.meta.env.VITE_TMDB_API_TOKEN}</p>
                 <Button variant="outlined" color="primary" onClick={() => setPage(page + 1)}>MUI Button</Button>
-                {getPage(page)}
+                {displayPage(page)}
             </div>
             <NavBar><h3>Test</h3></NavBar>
         </>
     );
 }
 
-function getPage(page: PAGES) {
+function displayPage(page: PAGES) {
     let val: string;
     switch (page) {
         case PAGES.INDEX:
