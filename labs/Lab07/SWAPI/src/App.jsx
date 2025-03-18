@@ -4,10 +4,10 @@ import axios from "axios";
 
 export default function App() {
     const SWAPI_ENDPOINT = 'https://swapi.dev/api/people';
-    const [rows, setRows] = useState([]);
+    const [rows, setRows] = useState(null);
     const [displaying, setDisplaying] = useState(false);
     const STYLE = {
-        display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', width: '100vw', height: '100vh', background: 'url("./assets/outerSpaceWars.jpg") no-repeat center bottom fixed'
+        display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', width: '100vw', height: '100vh', background: ' #111f url("src/assets/starWarsBackground.jpg") no-repeat fixed center top'
     };
 
     useEffect(() => {

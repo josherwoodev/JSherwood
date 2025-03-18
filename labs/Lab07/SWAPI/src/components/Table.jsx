@@ -1,6 +1,6 @@
 export default function Table(props) {
-    return (<table>
-        <thead>
+    return (<table style={{backgroundColor:'#222f'}}>
+        <thead style={{backgroundColor:'#444f'}}>
         <tr>
             <th>Name</th>
             <th>Height</th>
@@ -15,7 +15,7 @@ export default function Table(props) {
             <td>{row.gender}</td>
         </tr>)) : (<tr>
             <td colSpan={4}>
-                <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}><h3>There was an error pulling data from SWAPI.</h3></div>
+                <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}><h3>Could not populate data from SWAPI.</h3></div>
             </td>
         </tr>)}</tbody>
     </table>);
