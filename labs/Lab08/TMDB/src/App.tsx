@@ -9,11 +9,12 @@ export default function App() {
     return (
         <>
             <NavBar></NavBar>
-            <div>
+            <div style={{flexGrow:1, width:'100%'}}>
                 <p>{import.meta.env.VITE_TMDB_API_TOKEN}</p>
                 <Button variant="outlined" color="primary" onClick={() => setPage(page + 1)}>MUI Button</Button>
+                {getPage(page)}
             </div>
-            {getPage(page)}
+            <NavBar><h3>Test</h3></NavBar>
         </>
     );
 }
