@@ -5,16 +5,16 @@ import {PAGES} from "./types.ts";
 
 export default function App() {
     const [page, setPage] = useState<PAGES>(PAGES.INDEX);
+    const [searchText, setSearchText] = useState("");
 
     return (
         <>
-            <NavBar links={[{text: "Home", handler: () => setPage(PAGES.INDEX)}, {text: "Now Playing", handler: () => setPage(PAGES.NOW_PLAYING)}]}/>
+            <NavBar links={[{text: "Home", handler: () => setPage(PAGES.INDEX)}, {text: "Now Playing", handler: () => setPage(PAGES.NOW_PLAYING)}]} search={(str:string)=>setSearchText(str)}/>
             <div style={{flexGrow: 1, width: '100%'}}>
-                <p>{import.meta.env.VITE_TMDB_API_TOKEN}</p>
                 <Button variant="outlined" color="primary" onClick={() => setPage(page + 1)}>MUI Button</Button>
-                {displayPage(page)}
+                {displayPage(page)}{searchText}
             </div>
-            <NavBar><h3>Test</h3></NavBar>
+            <NavBar><p style={{width:'50%'}}><span className="inline"><b>TMDB</b></span> API display created as an assignment within Advanced Web Programming. Not for commercial use.</p></NavBar>
         </>
     );
 }
@@ -29,7 +29,7 @@ function displayPage(page: PAGES) {
             val = 'results';
             break;
         case PAGES.NOW_PLAYING:
-            val = 'nowPlaying';
+            val = 'now playing';
             break;
         case PAGES.ERROR:
         default:
