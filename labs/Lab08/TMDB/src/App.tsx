@@ -9,7 +9,7 @@ export default function App() {
 
     return (
         <>
-            <NavBar links={[{text: "Home", handler: () => setPage(PAGES.INDEX)}, {text: "Now Playing", handler: () => setPage(PAGES.NOW_PLAYING)}]} search={(str:string)=>setSearchText(str)}/>
+            <NavBar links={[{text: "Home", clicked: () => setPage(PAGES.INDEX)}, {text: "Now Playing", clicked: () => setPage(PAGES.NOW_PLAYING)}]} search={(str:string)=>setSearchText(str)}/>
             <div style={{flexGrow: 1, width: '100%'}}>
                 <Button variant="outlined" color="primary" onClick={() => setPage(page + 1)}>MUI Button</Button>
                 {displayPage(page)}{searchText}

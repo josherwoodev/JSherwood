@@ -8,7 +8,7 @@ export default function NavBar(props: any) {
     return (<Box sx={{flexGrow: 0, width: 1}}>
         <AppBar position="sticky" color="default"><Container maxWidth="lg">
             <Toolbar sx={{display: "flex", flexDirection: "row", placeContent: "start"}} disableGutters>
-                {props.links ? props.links.map((link: any, index: number) => (<Button key={index} onClick={link.handler} color="inherit">{link.text}</Button>)) : null}
+                {props.links ? props.links.map((link: any, index: number) => (<Button key={index} onClick={link.clicked} color="inherit">{link.text}</Button>)) : null}
                 <div style={{flexGrow: 1}}>{props.children}</div>
                 {props.search
                     ? <TextField label="Search ..." value={searchText} onChange={(e) => setSearchText(e.target.value)} variant="outlined" size="small" slotProps={{
