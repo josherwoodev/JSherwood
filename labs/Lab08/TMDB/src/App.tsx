@@ -28,6 +28,9 @@ function displayPage(page: PAGES) {
         case PAGES.RESULTS:
             val = 'results';
             break;
+        case PAGES.NOW_PLAYING:
+            val = 'nowPlaying';
+            break;
         case PAGES.ERROR:
         default:
             val = 'error';
