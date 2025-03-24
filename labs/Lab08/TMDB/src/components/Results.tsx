@@ -1,3 +1,6 @@
+import {useParams} from "react-router-dom";
+
 export default function Results() {
-    return (<></>);
+    const {searchTerm} = useParams();
+    return (<>Searched: {searchTerm}</>);
 }
