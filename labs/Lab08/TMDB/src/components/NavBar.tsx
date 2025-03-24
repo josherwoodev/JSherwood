@@ -9,7 +9,7 @@ export default function NavBar(props: any) {
 
     const A_STYLE = {fontSize: 0, lineHeight: "normal", cursor: "pointer"};
     return (
-        <AppBar position="sticky" color="default"><Container maxWidth="lg">
+        <AppBar position="sticky" color="secondary"><Container maxWidth="lg">
             <Toolbar sx={{display: "flex", flexDirection: "row", placeContent: "start"}} disableGutters>
                 {props.links ? props.links.map((link: any, index: number) => (<Button key={index} href={link.href} color="inherit">{link.text}</Button>)) : null}
                 <div style={{flexGrow: 1}}>{props.children}</div>
