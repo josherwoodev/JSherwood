@@ -15,7 +15,7 @@ export default function NavBar(props: any) {
                 <div style={{flexGrow: 1}}>{props.children}</div>
                 {props.search
                     ? <form action="#" onSubmit={e => {e.preventDefault();navigate("/search/" + searchText)}}>
-                        <TextField label="Search ..." value={searchText} onChange={(e) => setSearchText(e.target.value)} variant="outlined" size="small" slotProps={{
+                        <TextField color="info" label="Search ..." value={searchText} onChange={(e) => setSearchText(e.target.value)} variant="outlined" size="small" slotProps={{
                             input: {
                                 endAdornment: (<InputAdornment position="end"><a style={A_STYLE} onClick={() =>navigate("/search/" + searchText)}>
                                     <Search/></a></InputAdornment>)
