@@ -1,4 +1,5 @@
 export type MovieRes = {
+    adult: boolean;
     poster_path: string;
     title: string;
     overview: string;
