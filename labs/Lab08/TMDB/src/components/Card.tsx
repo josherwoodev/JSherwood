@@ -31,6 +31,7 @@ export default function Card(props: any) {
         <div style={STYLE}>
             <img src={props.adult ? BONK : (props.poster_path ? buildImgRef(props.poster_path, minified) : NO_IMAGE)} style={{width: minified ? SIZE_185 : SIZE_342}} alt={props.poster_path ? props.title : "No image provided."}/>
             <h4 style={CONSTRAINED}>{props.title}</h4>
+            <h5 style={{margin: 0, opacity: .4}}>{new Date(props.release_date).toLocaleDateString("en-us", {weekday: "short", day: "2-digit", month: "short", year: "numeric"})}</h5>
             <p style={{...CONSTRAINED, flexGrow: 1}}>{props.overview}</p>
             <p style={CONSTRAINED}>{props.vote_average} / 10 ({props.vote_count})</p>
         </div>
