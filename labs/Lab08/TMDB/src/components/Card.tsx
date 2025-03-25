@@ -3,6 +3,7 @@ import {CSSProperties, useEffect, useState} from "react";
 
 export default function Card(props: any) {
     const LG_THRESHOLD = 1366;
+    const NO_IMAGE = "/src/assets/where.png";
     const {width} = useWindowDimensions();
     const [minified, setMinified] = useState(width < LG_THRESHOLD);
     const STYLE: CSSProperties = {
@@ -27,7 +28,7 @@ export default function Card(props: any) {
 
     return (
         <div style={STYLE}>
-            <img src={buildImgRef(props.poster_path, minified)} style={{width: minified ? SIZE_185 : SIZE_342}} alt={props.title}/>
+            <img src={props.poster_path ? buildImgRef(props.poster_path, minified) : NO_IMAGE} style={{width: minified ? SIZE_185 : SIZE_342}} alt={props.poster_path ? props.title : "No image provided."}/>
             <h4 style={CONSTRAINED}>{props.title}</h4>
             <p style={{...CONSTRAINED, flexGrow: 1}}>{props.overview}</p>
             <p style={CONSTRAINED}>{props.vote_average} / 10 ({props.vote_count})</p>

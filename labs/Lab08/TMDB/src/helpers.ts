@@ -5,13 +5,11 @@ const BASE_URL = "https://image.tmdb.org/t/p";
 export const SIZE_185 = 185;
 export const SIZE_342 = 342;
 
-// export const SIZE_500 = 500;
-
 export function reqNowPlaying() {
     return axios.get("https://api.themoviedb.org/3/movie/now_playing", {headers: {Authorization: `Bearer ${import.meta.env.VITE_TMDB_API_TOKEN}`}});
 }
 
-export function reqSearch(str: string) {
+export function reqSearch(str: string = '') {
     return axios.get(`https://api.themoviedb.org/3/search/movie?query=${encodeURI(str)}`, {headers: {Authorization: `Bearer ${import.meta.env.VITE_TMDB_API_TOKEN}`}});
 }
 
