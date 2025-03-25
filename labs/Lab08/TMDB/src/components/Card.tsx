@@ -27,7 +27,7 @@ export default function Card(props: any) {
 
     return (
         <div style={STYLE}>
-            <img src={buildImgRef(props.poster_path, minified)} style={{width: minified ? SIZE_185 : SIZE_342}}/>
+            <img src={buildImgRef(props.poster_path, minified)} style={{width: minified ? SIZE_185 : SIZE_342}} alt={props.title}/>
             <h4 style={CONSTRAINED}>{props.title}</h4>
             <p style={{...CONSTRAINED, flexGrow: 1}}>{props.overview}</p>
             <p style={CONSTRAINED}>{props.vote_average} / 10 ({props.vote_count})</p>
