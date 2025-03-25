@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import Card from "./Card.tsx";
 import {reqNowPlaying} from "../helpers.ts";
+import {MovieRes} from "../types.ts";
 
 export default function NowPlaying() {
     const [movies, setMovies] = useState([]);
@@ -10,6 +11,6 @@ export default function NowPlaying() {
     }, []);
 
     return (<div style={{display: "flex", flexDirection: "row", alignContent: "start", justifyContent: "space-around", flexWrap: "wrap", padding: 10}}>
-        {movies.map((movie, index) => (<Card key={index} data={movie}/>))}
+        {movies.map((movie: MovieRes, index) => (<Card key={index} {...movie}/>))}
     </div>);
 }
