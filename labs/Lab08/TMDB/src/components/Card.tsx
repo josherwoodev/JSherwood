@@ -4,7 +4,7 @@ import {CSSProperties, useEffect, useState} from "react";
 export default function Card(props: any) {
     const LG_THRESHOLD = 1366;
     const NO_IMAGE = "/src/assets/where.png";
-    const BONK = "/src/assets/hornyJail.jpg";
+    const BONK = "/src/assets/hornyJail.png";
     const {width} = useWindowDimensions();
     const [minified, setMinified] = useState(width < LG_THRESHOLD);
     const STYLE: CSSProperties = {
