@@ -15,7 +15,7 @@ export default function Results() {
     return (<>{
         movies && movies.length ? <MovieList movies={movies}/>
             : <Error>
-                <h3>No results for {searchTerm}</h3>
+                <h2>No results for {searchTerm}</h2>
                 <p>Please try again with another search.</p>
             </Error>
     }</>);
