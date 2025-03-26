@@ -9,11 +9,14 @@ export default function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Layout />}>
-                    <Route index element={<Landing />} />
-                    <Route path="now-playing" element={<NowPlaying />} />
-                    <Route path="search/:searchTerm" element={<Results />} />
-                    <Route path="*" element={<Error />} />
+                <Route path="/" element={<Layout/>}>
+                    <Route index element={<Landing/>}/>
+                    <Route path="now-playing" element={<NowPlaying/>}/>
+                    <Route path="search">
+                        <Route index element={<Error><h2>Cannot execute empty search.</h2><p>Please enter search term(s) and try again.</p></Error>}/>
+                        <Route path=":searchTerm" element={<Results/>}/>
+                    </Route>
+                    <Route path="*" element={<Error/>}/>
                 </Route>
             </Routes>
         </BrowserRouter>
